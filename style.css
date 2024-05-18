@@ -8,22 +8,38 @@
 }
 
 :root{
-    --clr-1: #0c2670;
-    --clr-2:#87db14;
+    --clr-1: #152c5f;
+    --clr-2:#81c91d;
+    --clr-3: #f8f9f7;
+    --clr-4: #758069;
+    --clr-5: #949cb9;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body{
-    background: #ffffff;
+  background: var(--clr-3);
 }
 
+.sections{
+  height: 100vh;
 
+}
+
+/* ESTILOS BARRA DE NAVEGACION */
 .header{
     display: flex;
     justify-content: space-around;
-    max-width: 100%;
+    width: 100%;
     height: 80px;
     align-items: center;
-    background-color: var(--clr-2);
+    background-color: var(--clr-5);
+}
+
+.header .logo{
+  width: 80px;
 }
 
 .nav-links{
@@ -38,6 +54,62 @@ body{
 }
 
 
+/* ESTILOS PRIMERA SECCION */
+.container{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  background: var(--clr-3);
+}
+
+.intro-container{
+  text-align: left;
+  padding: 100px;
+}
+
+.intro-container h1{
+  font-size: 4em;
+  margin-bottom: 30px;
+  color: var(--clr-1);
+}
+
+.intro-container p{
+  font-size: 1.3em;
+  width: 70%;
+  color: var(--clr-4);
+}
+
+.intro-img{
+  width: 100%;
+  height: 75%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+/* ESTILOS SEGUNDA SECCION */
+
+.about{
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 350px;
+  background-color: var(--clr-5);
+}
+
+.about-title{
+  font-size: 4em;
+  width: 50%;
+  color: var(--clr-3);
+}
+
+.about-description{
+  width: 50%;
+  font-size: 1.2rem;
+  color: var(--clr-1);
+
+}
 
 
 
@@ -46,8 +118,28 @@ body{
 
 
 
+.gallery{
+  display: flex;
+  width: 100%;
+  height: 430px;
+}
 
 
+.gallery-container .gallery img{
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .5;
+  transition: 0.5s ease;
+  border-radius: 20px;
+  margin: 1%;
+}
+
+.gallery img:hover{
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
 
 
 @-webkit-keyframes scroll {
